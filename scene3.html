@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <title>Data Visualization</title>
+</head>
+
+<body onload="loadScene3()">
+    <h2>Annaul Fuel Savings of Driving a Electric Vehicles Over a Gas Vehicles </h2>
+
+    <div>
+        <p>In this </p>
+    </div>
+
+    <div class="container">
+        <p>Enter the amount of miles you drive annually to view how much you can potetially save per year by driving a
+            BEV instead of a ICE vehicle. <br>
+            This fuel savings are calculated by taking the difference of fuel costs for a ICE and electricty charging
+            costs for a BEV
+            to drive the same mileage.
+            <br> The calculations for this chart assume an average US gas price of $4.25, average US electicty price of
+            $0.15/kWh, and average of 14000 miles driven per year.
+        </p>
+        <form name="mile-form" onkeydown="return event.key != 'Enter';">
+            <label for="quantity">Annnual Mileage:</label>
+            <input type="number" id="quantity" name="quantity" min="100" max="20000" value="14000"
+                onkeyup="formValidation(document.getElementById('quantity').value)">
+            <input id="button" type="button" value="Submit"
+                onclick="updateFuelSavignsChart(document.getElementById('quantity').value)">
+        </form>
+        <div class="svg-container">
+
+            <div id="my_dataviz"></div>
+        </div>
+    </div>
+    <p>The fuel economy data for this visualization is based off 2022 model year vehicles sourced from the <a
+            href="https://www.fueleconomy.gov/feg/download.shtml">US Department of Energy</a> </p>
+    <p>
+        Currently on slide 3 of 3.
+    </p>
+    <a href="scene1.html"> Click here to go back to slide 1</a>
+</body>
+
+</html>

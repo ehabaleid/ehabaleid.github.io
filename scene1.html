@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-annotation/2.5.1/d3-annotation.min.js"></script>
+    <title>Data Visualization</title>
+</head>
+
+<body onload="loadScene1()">
+    <h2>Fuel Efficiency of ICE(Internal Combustion Engine) Vehicles</h2>
+
+    <div>
+        <p> In this interactive slideshow we will explore the fuel economy of ICE(internal combustion engine) vehicles
+            vs BEV(battery electric vehicles). <br> In this first scene you can explore the average
+            city/highway/combined MPG(miles per gallon) of ICE
+            vehicles by vehicle classification. <br> Hover over a vehicle bar to view the combined MPG in a tooltip</p>
+    </div>
+
+    <div class="container">
+        <p>Select a radio button to see the difference between city and highway MPG for each vehicle class
+        </p>
+        <form>
+            <label class="radio-inline">
+                <input onclick="updateMpgChartIce('city')" type="radio" name="optradio" checked>City
+            </label>
+            <label class="radio-inline">
+                <input onclick="updateMpgChartIce('highway')" type="radio" name="optradio">Highway
+            </label>
+        </form>
+
+
+        <div class="svg-container">
+            <div id="my_dataviz"></div>
+        </div>
+    </div>
+    <p>The fuel economy data for this visualization is based off 2022 model year vehicles sourced from the <a
+            href="https://www.fueleconomy.gov/feg/download.shtml">US Department of Energy</a> </p>
+    <p>
+        Currenly on slide 1 of 3.
+    </p>
+    <a href="scene2.html"> Click here to go to slide 2 </a>
+</body>
+
+</html>

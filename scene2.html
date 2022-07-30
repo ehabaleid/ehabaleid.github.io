@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-annotation/2.5.1/d3-annotation.min.js"></script>
+
+    <title>Data Visualization</title>
+</head>
+
+<body onload="loadScene2()">
+    <h2>Energy Efficiency of BEVs(Battery Electric Vehicles)</h2>
+
+    <div>
+        <p> In this second scene you can explore the average
+            city/highway/combined MPGe (Miles Per Gallon equivalent) of BEV
+            vehicles by vehicle classification. <br> Since electric vehicles don't use gasoline, the EPA came up with
+            the unit of
+            measurement for the electric vehicles energy consumption level to compare with gas-powered vehicles. <br>
+            The formula for MPGe is calculated as 33.7 kWh of electricity = 1 gallon of gasoline.
+    </div>
+
+    <div class="container">
+        <p>Select a radio button to see a different view for city or highway average MPG
+        </p>
+        <form>
+            <label class="radio-inline">
+                <input onclick="updateMpgChartBev('city')" type="radio" name="optradio" checked>City
+            </label>
+            <label class="radio-inline">
+                <input onclick="updateMpgChartBev('highway')" type="radio" name="optradio">Highway
+            </label>
+        </form>
+        <div class="svg-container">
+
+            <div id="my_dataviz"></div>
+        </div>
+    </div>
+    <p>BEV vehicles are more
+        efficient in low speed stop and go city type driving because they don't have an ICE idiling and wasting
+        energy every time you come to a stop at an intersection. <br> Furthermore regenerative braking helps recoup some
+        energy back in stop and go traffic </p>
+    </p>
+    <p>The fuel economy data for this visualization is based off 2022 model year vehicles sourced from the <a
+            href="https://www.fueleconomy.gov/feg/download.shtml">US Department of Energy</a> </p>
+    <p>
+        Currently on slide 2 of 3.
+    </p>
+    <a href="scene3.html"> Click here to go to slide 3</a>
+
+</body>
+
+</html>
